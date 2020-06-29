@@ -1,13 +1,16 @@
-﻿namespace LinkedListImplementation
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace LinkedListImplementation
 {
-    internal sealed class LinkedList<T> : IContractList<T>
+    internal sealed class LinkedList<T> : IContractList<T>, IEnumerable<T>
     {
         private Node<T> _head;
         private Node<T> _tail;
+        private int     _count;
 
-        private int _count;
-
-        public int Count { get => _count; }
+        public int Count    { get => _count; }
         public bool IsEmpty { get => _count == 0; }
 
         public void Add(T data)
@@ -30,7 +33,7 @@
 
         public bool Remove(T data)
         {
-            Node<T> current = _head;
+            Node<T> current  = _head;
             Node<T> previous = null;
 
             while (current != null)
@@ -65,7 +68,7 @@
                     _count--;
                 }
                 previous = current;
-                current = current.Next;
+                current  = current.Next;
             }
 
             return false;
@@ -87,8 +90,8 @@
 
         public void Clear()
         {
-            _head = null;
-            _tail = null;
+            _head  = null;
+            _tail  = null;
             _count = 0;
         }
 
@@ -107,6 +110,49 @@
             }
 
             return false;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            Node<T> current = _head;
+
+            while (current != null)
+            {
+                yield return current.Data;
+
+                current = current.Next;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable)this).GetEnumerator();
+
+        [Obsolete("Как вариант")]
+        public void AddWithoutTail(T data)
+        {
+            //Важно отметить наличие переменной tail, которая указывает на последний элемент.
+            //Ряд реализаций не используют подобную переменную и добавляют иным образом:
+
+            Node<T> node = new Node<T>(data);
+
+            if (_head == null)
+            {
+                _head = node;
+            }
+            else
+            {
+                Node<T> current = _head;
+
+                // ищем последний элемент
+                while (current.Next != null)
+                {
+                    current = current.Next;
+                }
+
+                //устанавливаем последний элемент
+                current.Next = node;
+            }
+
+            _count++;
         }
     }
 }
