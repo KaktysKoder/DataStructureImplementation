@@ -1,0 +1,13 @@
+F:\CollectionDataStructure\Queue\QueueImplementation\bin\Debug\netcoreapp3.1\QueueImplementation.exe
+F:\CollectionDataStructure\Queue\QueueImplementation\bin\Debug\netcoreapp3.1\QueueImplementation.deps.json
+F:\CollectionDataStructure\Queue\QueueImplementation\bin\Debug\netcoreapp3.1\QueueImplementation.runtimeconfig.json
+F:\CollectionDataStructure\Queue\QueueImplementation\bin\Debug\netcoreapp3.1\QueueImplementation.runtimeconfig.dev.json
+F:\CollectionDataStructure\Queue\QueueImplementation\bin\Debug\netcoreapp3.1\QueueImplementation.dll
+F:\CollectionDataStructure\Queue\QueueImplementation\bin\Debug\netcoreapp3.1\QueueImplementation.pdb
+F:\CollectionDataStructure\Queue\QueueImplementation\obj\Debug\netcoreapp3.1\QueueImplementation.csprojAssemblyReference.cache
+F:\CollectionDataStructure\Queue\QueueImplementation\obj\Debug\netcoreapp3.1\QueueImplementation.AssemblyInfoInputs.cache
+F:\CollectionDataStructure\Queue\QueueImplementation\obj\Debug\netcoreapp3.1\QueueImplementation.AssemblyInfo.cs
+F:\CollectionDataStructure\Queue\QueueImplementation\obj\Debug\netcoreapp3.1\QueueImplementation.csproj.CoreCompileInputs.cache
+F:\CollectionDataStructure\Queue\QueueImplementation\obj\Debug\netcoreapp3.1\QueueImplementation.dll
+F:\CollectionDataStructure\Queue\QueueImplementation\obj\Debug\netcoreapp3.1\QueueImplementation.pdb
+F:\CollectionDataStructure\Queue\QueueImplementation\obj\Debug\netcoreapp3.1\QueueImplementation.genruntimeconfig.cache
