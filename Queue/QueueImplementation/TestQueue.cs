@@ -1,87 +1,75 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace QueueImplementation
 {
-    internal class TestQueue<T>
+    /// <summary>
+    /// Моя реализация кучи на основе изученных ранее структур данных.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    internal class TestQueue<T> : IQueue<T>, IEnumerable<T>
     {
-        //Указатель на голову очереди
-        private LinkedListNode<T> _head;
+        private Node<T> _head;
+        private Node<T> _tail;
 
-        //Указатель на хвост очереди
-        private LinkedListNode<T> _tail;
-
-        private int _count;
-
-        public int Count { get => _count; }
-
+        public int Count    { get; private set;  }
         public bool IsEmpty { get => Count == 0; }
 
-        public TestQueue()
-        {
+        public T Front => _head.Data;
+        public T Back  => _tail.Data;
 
-        }
-
-        //Добавлние элемента в конец очереди
         public void Push(T addsElement)
         {
-            LinkedListNode<T> node = new LinkedListNode<T>(addsElement);
+            Node<T> node = new Node<T>(addsElement);
 
-            //кастыль
-            //var nextTail = _tail.Next;
-
-            if(IsEmpty)
+            if (IsEmpty)
             {
-                //И голова и хвост указывают на 1 элемент
                 _head = _tail = node;
             }
             else
             {
-                // Исправить эту ошибку _tail.Next = node;
-                //_ = _tail.Next;
-   
                 _tail.Next = node;
-                _tail = node;
+                _tail      = node;
             }
 
-            _count++;
+            Count++;
         }
 
-        /// <summary>
-        /// Извлечение элемента из очереди
-        /// </summary>
-        /// <returns></returns>
         public T Pop()
         {
-            T value = _head.Value;
+            T value = _head.Data;
 
-            //Если оччередь из 1 эл
-            if(_head == _tail)
+            if (_head == _tail)
             {
                 _head = _tail = null;
             }
-            else
-            {
-                _head = _head.Next;
-            }
+            else { _head = _head.Next; }
 
-            _count--;
+            Count--;
 
             return value;
         }
 
-
-        //Возврат эл из очереди без его извлечения
-        public T Front()
+        public void Foreach(TestQueue<T> instance)
         {
-            return _head.Value;
+            foreach (var item in instance)
+            {
+                System.Console.WriteLine(instance.Pop());
+            }
         }
 
-
-        //Получ посл эл из очередт
-        public T Back()
+        public IEnumerator<T> GetEnumerator()
         {
-            return _tail.Value;
+            Node<T> current = _head;
+
+            while (current != null)
+            {
+                yield return current.Data;
+
+                current = current.Next;
+            }
         }
-        
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }
