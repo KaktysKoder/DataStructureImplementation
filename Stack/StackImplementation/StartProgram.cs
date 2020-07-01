@@ -7,7 +7,6 @@ namespace StackImplementation
         private static void Main()
         {
             Test2();
-
         }
 
         private static void Test2()

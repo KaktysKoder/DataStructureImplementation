@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace StackImplementation
 {
-    internal sealed class Stack<T> : IEnumerable<T>
+    internal sealed class Stack<T> : IStack<T>, IValidation, IPrivateStack, IEnumerable<T>
     {
         private readonly int _size;
         private readonly T[] _array;
@@ -17,25 +17,15 @@ namespace StackImplementation
             _array = new T[size];
         }
 
-        //Маркер верхнего элемента стека
-        public int Top { get => _head; }
-
-        //Размер стека
-        public int Size { get => _size; }
-
-        //Количество элементов стека
+        public int Top   { get => _head; }
+        public int Size  { get => _size; }
         public int Count { get => _head; }
 
-        //Проверить пустой ли стек
         public bool IsEmpty => _head == 0;
+        public bool IsFull  => _head == _size;
 
-        //Проверить заполнен ли стек
-        public bool IsFull => _head == _size;
-
-        //Вернуть верхний элемент
         public T Peek => _array[_head - 1];
 
-        //Добавляем элемент в стек
         public void Push(T element)
         {
             if (IsFull)
@@ -58,7 +48,8 @@ namespace StackImplementation
 
         public IEnumerator<T> GetEnumerator()
         {
-            if (IsEmpty) throw new InvalidOperationException("Стек не заполнен.");
+            if (IsEmpty)
+                throw new InvalidOperationException("Стек не заполнен.");
 
             for (int i = _head; i > 0; i--)
             {
