@@ -1,0 +1,13 @@
+F:\CollectionDataStructure\Stack\StackImplementation\bin\Debug\netcoreapp3.1\StackImplementation.exe
+F:\CollectionDataStructure\Stack\StackImplementation\bin\Debug\netcoreapp3.1\StackImplementation.deps.json
+F:\CollectionDataStructure\Stack\StackImplementation\bin\Debug\netcoreapp3.1\StackImplementation.runtimeconfig.json
+F:\CollectionDataStructure\Stack\StackImplementation\bin\Debug\netcoreapp3.1\StackImplementation.runtimeconfig.dev.json
+F:\CollectionDataStructure\Stack\StackImplementation\bin\Debug\netcoreapp3.1\StackImplementation.dll
+F:\CollectionDataStructure\Stack\StackImplementation\bin\Debug\netcoreapp3.1\StackImplementation.pdb
+F:\CollectionDataStructure\Stack\StackImplementation\obj\Debug\netcoreapp3.1\StackImplementation.csprojAssemblyReference.cache
+F:\CollectionDataStructure\Stack\StackImplementation\obj\Debug\netcoreapp3.1\StackImplementation.AssemblyInfoInputs.cache
+F:\CollectionDataStructure\Stack\StackImplementation\obj\Debug\netcoreapp3.1\StackImplementation.AssemblyInfo.cs
+F:\CollectionDataStructure\Stack\StackImplementation\obj\Debug\netcoreapp3.1\StackImplementation.csproj.CoreCompileInputs.cache
+F:\CollectionDataStructure\Stack\StackImplementation\obj\Debug\netcoreapp3.1\StackImplementation.dll
+F:\CollectionDataStructure\Stack\StackImplementation\obj\Debug\netcoreapp3.1\StackImplementation.pdb
+F:\CollectionDataStructure\Stack\StackImplementation\obj\Debug\netcoreapp3.1\StackImplementation.genruntimeconfig.cache
